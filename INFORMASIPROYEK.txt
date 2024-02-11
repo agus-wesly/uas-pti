@@ -1,0 +1,50 @@
+UJIAN AKHIR SEMESTER MATA KULIAH PENERAPAN TEKNOLOGI INTERNET
+Dosen Pengampu : Geraldi Catur Pamuji, S.Kom., M.Kom
+
+Kelas : IF-6
+Anggota Kelompok : 
+- 10121206 - Naufal Atsari Sobur
+- 10121208 - Ridwan Arief Mutaqin
+- 10121210 - Jaka Mursid Muarif
+- 10121231 - Agustinus Wesly Sitanggang
+
+Deskripsi Proyek : 
+Proyek merupakan platform mengirim pesan singkat rahasia dimana identitas pengirim pesan disembunyikan dari penerima pesan. Proyek ini terinspirasi dari website NGL : https://ngl.link/. Fitur - fitur yang tersedia diantaranya : 
+1. Registrasi user baru
+2. Login user
+3. Bagikan link user untuk dikirimi pesan
+4. Lihat list semua pesan yang diterima
+5. Lihat detail pesan yang diterima
+6. Hapus pesan yang diterima
+
+Teknologi - teknologi yang digunakan antara lain : 
+- React.JS (Library frontend & pembuatan UI)
+- Express.JS (Library backend & pembuatan API)
+- Mongo DB (Database untuk menyimpan pesan)
+- Tailwind.CSS (Styling website)
+
+Prerequisite : 
+Untuk menjalankan projek diperlukan teknologi berikut : 
+- Node.JS versi 18 atau lebih
+- NPM
+
+Cara menjalankan : 
+1. Frontend
+- Masuk ke folder uas-pti-frontend
+cd uas-pti-frontend
+
+- Install dependensi
+npm install
+
+- Jalankan aplikasi
+- npm run start
+
+2. Backend
+- Masuk ke folder uas-pti-backend
+cd uas-pti-backend
+
+- Install dependensi
+npm install
+
+- Jalankan aplikasi
+- npm run start

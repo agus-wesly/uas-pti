@@ -1,0 +1,660 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap");
+@import url("https://fonts.cdnfonts.com/css/calibre");
+@font-face {
+  font-family: euclid circular a;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A Regular.woff") format("woff");
+}
+@font-face {
+  font-family: euclid circular a;
+  font-style: italic;
+  font-weight: 400;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A Italic.woff") format("woff");
+}
+@font-face {
+  font-family: euclid circular a;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A Light.woff") format("woff");
+}
+@font-face {
+  font-family: euclid circular a;
+  font-style: italic;
+  font-weight: 300;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A Light Italic.woff") format("woff");
+}
+@font-face {
+  font-family: euclid circular a;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A Medium.woff") format("woff");
+}
+@font-face {
+  font-family: euclid circular a;
+  font-style: italic;
+  font-weight: 500;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A Medium Italic.woff") format("woff");
+}
+@font-face {
+  font-family: euclid circular a;
+  font-style: normal;
+  font-weight: 600;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: euclid circular a;
+  font-style: italic;
+  font-weight: 600;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A SemiBold Italic.woff") format("woff");
+}
+@font-face {
+  font-family: euclid circular a;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A Bold.woff") format("woff");
+}
+@font-face {
+  font-family: euclid circular a;
+  font-style: italic;
+  font-weight: 700;
+  src: local("Euclid Circular A"), url("https://fonts.cdnfonts.com/s/60248/Euclid Circular A Bold Italic.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Toastify__toast-container {
+  max-width: 280px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+nav {
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.55);
+}
+
+nav h1 {
+  color: rgb(0, 104, 74);
+  font-family: "Value Serif Pro";
+}
+
+nav ul li a:hover {
+  color: #13aa52;
+}
+
+.login {
+  padding: 30px;
+  max-width: 385px;
+  min-height: 80vh;
+  font-family: "Euclid Circular A", sans-serif;
+  display: flex;
+  place-items: center;
+  margin: 0 auto;
+}
+
+.alert-message {
+  box-sizing: border-box;
+  border: 1px solid rgb(195, 231, 254);
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  padding: 16px;
+  position: relative;
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 60px;
+  font-weight: 400;
+  color: rgb(0, 104, 74);
+  text-align: center;
+}
+
+form {
+  font-family: "Euclid Circular A";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+form h1 {
+  margin-bottom: 18px;
+}
+
+form .label-username,
+form .label-password {
+  font-size: 17px;
+  color: rgb(61, 79, 88);
+  position: relative;
+  height: 16px;
+  width: 36px;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+form input {
+  width: 100%;
+  font-weight: normal;
+  border: 1px solid rgb(193, 199, 198);
+  transition: border-color 150ms ease-in-out 0s;
+  outline: none;
+  color: rgb(0, 30, 43);
+  background-color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 20px;
+  height: 36px;
+  padding-left: 12px;
+  font-family: "Euclid Circular A", "Akzidenz", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius: 6px;
+  padding-right: 12px;
+  margin-bottom: 10px;
+}
+
+form .input-container {
+  margin-bottom: 20px;
+}
+
+form .bottom-container {
+  display: flex;
+  align-items: center;
+}
+
+form .bottom-container button {
+  height: 32px;
+  width: 90px;
+  font-size: 15px;
+  margin-bottom: 0px;
+  background-color: rgb(0, 104, 74);
+  border-color: rgb(193, 199, 198);
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+form .bottom-container .invalid {
+  background-color: rgb(232, 237, 235);
+  border-color: rgb(193, 199, 198);
+  color: rgb(136, 147, 151);
+  cursor: not-allowed;
+}
+
+form .bottom-container div {
+  margin-left: 15px;
+  color: rgb(28, 45, 56);
+  font-size: 14px;
+}
+
+form .bottom-container div a {
+  text-decoration: none;
+  color: rgb(1, 107, 248);
+}
+
+.register {
+  padding: 30px;
+  max-width: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Euclid Circular A", sans-serif;
+  margin: auto;
+}
+
+.instruction {
+  box-sizing: border-box;
+  border: 1px solid rgb(195, 231, 254);
+  width: 300px;
+  margin-top: 16px;
+  background-color: rgb(225, 247, 255);
+  padding: 16px;
+  color: rgb(1, 107, 248);
+  position: relative;
+}
+
+.instruction ul {
+  list-style-type: disc;
+  padding-left: 5px;
+}
+
+.hide {
+  visibility: hidden;
+  position: absolute;
+}
+
+.userinfo-container {
+  display: flex;
+  align-items: center;
+}
+
+.userinfo-container img {
+  display: block;
+  width: 100%;
+}
+
+.animated {
+  transition: all 0.3s ease-out;
+}
+
+.msg-container {
+  min-height: 90vh;
+  padding: 15px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  padding: 10px 24px;
+  color: rgb(14, 30, 37);
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px;
+  background-color: rgb(255, 255, 255);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-family: "Inter";
+  border-top: 7px solid #13aa52;
+}
+
+.card div:first-child {
+  margin-bottom: 13px;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: bold;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.card div:nth-child(2) {
+  font-size: 15px;
+}
+
+.delete-btn {
+  align-self: flex-start;
+  background-color: rgba(230, 48, 48, 0.856);
+  color: whitesmoke;
+  padding: 3px 5px;
+  font-size: 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.bg-green-mongo {
+  background-color: #00684a;
+}
+
+.logout-btn {
+  background-color: rgba(230, 48, 48, 0.856);
+  color: whitesmoke;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
+.welcome-heading {
+  font-size: 56px;
+  line-height: 64px;
+  color: #001e2b;
+  font-family: "Value Serif Pro";
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 90vh;
+  background-color: #023430;
+  background-image: url("https://webimages.mongodb.com/_com_assets/cms/kv2w4r2ul3izubh0u-Homepage_Atlas-tile-card.svg?auto=format%252Ccompress");
+  background-repeat: no-repeat;
+  background-position: 190% 25%;
+  background-size: 70%;
+}
+
+.welcome-heading .container {
+  width: 80%;
+  flex: 1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-heading h1 {
+  color: #ffffff;
+}
+
+.link-container {
+  font-family: "Euclid Circular A";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  border: 2px solid #00684a;
+  display: flex;
+  margin-top: 4rem;
+  width: 80%;
+  justify-content: center;
+}
+
+.link-container input {
+  flex: 1;
+}
+
+.copy-btn {
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: #00684a;
+  padding: 1px 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.copy-btn::before {
+  content: "";
+  transform: translateY(0);
+  transition: 0.5s;
+}
+
+.copy::before {
+  content: "Copied";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-30px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  text-align: center;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.img-container {
+  width: 60px;
+  height: 60px;
+  margin-right: 0.75rem;
+}
+
+.create-post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 0 30px;
+}
+
+.create-post-container .post-container {
+  min-width: 318px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+}
+
+.post-container .post-header {
+  padding: 16px 16px 12px;
+  font-size: 14px;
+  background-color: #023430;
+  color: #ffffff;
+  border-radius: 32px 32px 0 0;
+  display: flex;
+  justify-content: left;
+}
+
+.post-header .post-user {
+  font-size: 18px;
+}
+
+.post-container form textarea {
+  background-color: #00ed64;
+  color: black;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  padding: 18px 24px;
+  height: 140px;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+}
+
+.post-container form textarea::placeholder {
+  color: #001e2b7e;
+}
+
+.create-post-container button {
+  font-family: Euclid Circular A;
+  width: 100%;
+  height: 40px;
+  background-color: #023430;
+  padding: 8px 24px;
+  color: #ffffff;
+  line-height: 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  margin-top: 3rem;
+  box-sizing: border-box;
+  max-width: 376px;
+}
+
+.create-post-container button:disabled {
+  background-color: rgb(232, 237, 235);
+  border-color: rgb(193, 199, 198);
+  color: rgb(136, 147, 151);
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  .welcome-heading {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://webimages.mongodb.com/_com_assets/cms/kv2w4r2ul3izubh0u-Homepage_Atlas-tile-card.svg?auto=format%252Ccompress");
+    background-color: #023430;
+    background-repeat: no-repeat;
+    background-position: -35% 10%;
+    height: 90vh;
+  }
+
+  .welcome-heading .container {
+    font-size: 40px;
+    line-height: 48px;
+    word-break: break-word;
+    margin: 0 auto;
+  }
+
+  .link-container {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 2rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .create-post-container {
+    min-height: 70vh;
+    justify-content: space-between;
+  }
+
+  .img-container img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .post-user p {
+    color: #b8c4c2;
+    font-size: 14px;
+  }
+
+  .post-user b {
+    color: #b8c4c2;
+    font-family: Euclid Circular A;
+    font-size: 16px;
+  }
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  transition: 0.4s;
+  visibility: hidden;
+  filter: blur(10px);
+  opacity: 0;
+}
+
+.overlay-visible {
+  visibility: visible;
+  opacity: 1;
+  filter: blur(0);
+}
+
+.overlay .confirm-logout {
+  display: grid;
+  gap: 18px;
+  place-items: center;
+  padding: 2px 5px;
+  background-color: rgb(14, 30, 37);
+  border-radius: 5px;
+  padding: 0.5rem 1.25rem;
+}
+
+.overlay .confirm-logout > p {
+  text-align: center;
+  font-size: 22px;
+  font-family: "Euclid Circular A";
+  font-weight: 600;
+  padding: 4px;
+  color: whitesmoke;
+}
+
+.overlay .confirm-logout .btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2px 0;
+}
+
+.overlay .confirm-logout .btn-container button {
+  text-align: center;
+  font-size: 18px;
+  font-family: "Euclid Circular A";
+  border-radius: 5px;
+  padding: 0.35rem 0.75rem;
+}
+
+.overlay .confirm-logout .btn-container button:first-child {
+  background-color: rgb(220, 28, 25);
+  color: white;
+}
+
+.overlay .confirm-logout .btn-container button:last-child {
+  background-color: #00ed64;
+  color: black;
+}
+
+/**
+  * scaling-circle
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes scaling-circle {
+  0%,
+  30%,
+  50%,
+  100% {
+    -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+  }
+  40% {
+    -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(0);
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(0);
+  }
+}
+@keyframes scaling-circle {
+  0%,
+  30%,
+  50%,
+  100% {
+    -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+  }
+  40% {
+    -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(0);
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(0);
+  }
+}
+
+.scaling-circle {
+  --radius: 25;
+  --size: 10;
+  height: calc(var(--size) * 1px);
+  width: calc(var(--size) * 1px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: scale(1.5);
+}
+.scaling-circle div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 100%;
+  background: #023430;
+  -webkit-animation: scaling-circle 0.8s calc(var(--delay) * 1s) infinite ease;
+  animation: scaling-circle 0.8s calc(var(--delay) * 1s) infinite ease;
+  -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px));
+  transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px));
+}
+.scaling-circle div:nth-child(1) {
+  --angle: 45;
+  --delay: 0.1;
+}
+.scaling-circle div:nth-child(2) {
+  --angle: 90;
+  --delay: 0.2;
+}
+.scaling-circle div:nth-child(3) {
+  --angle: 135;
+  --delay: 0.3;
+}
+.scaling-circle div:nth-child(4) {
+  --angle: 180;
+  --delay: 0.4;
+}
+.scaling-circle div:nth-child(5) {
+  --angle: 225;
+  --delay: 0.5;
+}
+.scaling-circle div:nth-child(6) {
+  --angle: 270;
+  --delay: 0.6;
+}
+.scaling-circle div:nth-child(7) {
+  --angle: 315;
+  --delay: 0.7;
+}
+.scaling-circle div:nth-child(8) {
+  --angle: 360;
+  --delay: 0.8;
+}
